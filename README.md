@@ -1,2 +1,4 @@
 # EdCar
-Projeto de um site para uma loja de aluguel de automóveis.
+## 📚 Projeto da universidade 📚
+
+Acompanhe para mais atualizações...
