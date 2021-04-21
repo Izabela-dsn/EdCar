@@ -1,0 +1,31 @@
+.page-footer{
+    width: 100vw;
+    background-color: var(--color-blue-strong);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;  
+}
+
+.column-about, 
+.column-terms,
+.column-contact,
+.column-rights{
+    color: white;
+    padding-top: 1.5rem;
+}
+
+.column-about p, 
+.column-terms p,
+.column-contact p{
+    padding-bottom: 1rem;
+}
+
+.column-rights p{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.page-footer hr{
+   width: 90vw;
+}
