@@ -1,0 +1,55 @@
+.banner{
+    background-color: black;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+}
+.call-to-action{
+    padding-left: 5rem;
+    padding-right: 2rem;
+}
+.banner p{
+    color: white;
+    font: 400 32px 'Noto Sans';
+}
+.banner img{
+    width: 60%;
+}
+.banner button{
+    width: 13rem;
+    height: 2.9rem;
+    border-radius: 10px;
+    border: 2px solid var(--color-orange-strong);
+    background-color: var(--color-orange-strong);
+    cursor: pointer;
+
+    margin-top: 2rem;
+    margin-left: 3.5rem;
+
+    font: 400 24px 'Open Sans';
+}
+
+.mini-banner{
+    height: 10rem;
+    margin: 4rem 5rem;
+    background-image: url(../../assets/images/minibanner.svg);
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mini-banner p{
+    color: white;
+    font: 400 24px 'Open Sans';
+    padding-right: 40rem;
+    padding-left: 5rem;
+}
+
+.landing h2{
+    font: 400 44px 'Open Sans';
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+}
