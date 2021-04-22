@@ -1,4 +1,8 @@
 import React from 'react';
+import { Icon, InlineIcon } from '@iconify/react';
+import facebookIcon from '@iconify/icons-logos/facebook';
+import instagramIcon from '../../assets/images/logos_instagram-icon.svg';
+import googleGmail from '@iconify/icons-logos/google-gmail';
 import './styles.css';
 
 function Footer (){
@@ -15,6 +19,9 @@ function Footer (){
             </div>
             <div className="column-contact">
                 <p>Contato</p> 
+                <Icon icon={facebookIcon} className="facebook" />
+                <img src={instagramIcon} className="instagram" alt="Instagram" />
+                <Icon icon={googleGmail} className="gmail"  />
             </div> 
             <div className="column-rights">
                 <hr/>

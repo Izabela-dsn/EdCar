@@ -1,5 +1,6 @@
 :root{
-    --color-blue-strong: #000341
+    --color-blue-strong: #000341;
+    --color-orange-strong: #FC6F03;
 }
 
 
@@ -7,4 +8,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+hr{
+    border: 1px solid #C2C2C2;
 }

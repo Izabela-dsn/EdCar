@@ -9,16 +9,25 @@ header{
 .logo h1{
     color: white;
     padding: 1rem 0 1rem 5rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
 }
 
 .buttons-login{
     display: flex;
-    padding-right: 2rem;
+    padding-right: 5rem;
 }
 
 .buttons-login a{
     text-decoration: none;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 35px;
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+  

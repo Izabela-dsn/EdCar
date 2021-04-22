@@ -7,6 +7,10 @@
     align-items: flex-start;  
 }
 
+.page-footer hr{
+    width: 90vw;
+}
+
 .column-about, 
 .column-terms,
 .column-contact,
@@ -19,13 +23,34 @@
 .column-terms p,
 .column-contact p{
     padding-bottom: 1rem;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
 }
 
 .column-rights p{
     padding-top: 1rem;
     padding-bottom: 2rem;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
 }
 
-.page-footer hr{
-   width: 90vw;
+.column-contact .instagram,  
+.column-contact .gmail{
+    font-size: 32px;
+    margin-left: 1rem;
 }
+.column-contact .facebook{
+    font-size: 32px;
+}
+.column-contact .instagram{
+    color: white;
+}
+
+
+
