@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import facebookIcon from '@iconify/icons-logos/facebook';
 import instagramIcon from '../../assets/images/logos_instagram-icon.svg';
 import googleGmail from '@iconify/icons-logos/google-gmail';

@@ -1,9 +1,19 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
 
 import './styles.css'
 import Footer from '../../components/Footer/footer';
 import Header from '../../components/Header/header';
+import PromotionalCard from '../../components/OfertCards';
+import whatsappIcon from '@iconify/icons-logos/whatsapp';
+
 import bannerImg from '../../assets/images/banner3.svg';
+import economic from '../../assets/images/promoeconomic.svg';
+import intermediate from '../../assets/images/intermediario.svg'
+import suv from '../../assets/images/suv.svg';
+import workerOne from '../../assets/images/worker1.svg';
+import workerTwo from '../../assets/images/worker2.svg';
+import workerThree from '../../assets/images/worker3.svg';
 
 function Landing (){
     return(
@@ -22,6 +32,65 @@ function Landing (){
             </div>
 
             <h2>Carros em oferta</h2>
+
+            <div className="offers">
+                <PromotionalCard
+                    src={economic}
+                    alt='Carro azul economico'
+                    type='Econômico'
+                    names='Renault Kwid | Fiat Mobi | Fiat Argo'
+                    fuel='Diesel/Gasolina'
+                    potency='1.0'
+                />
+
+                <hr/>
+
+                <PromotionalCard
+                    src={intermediate}
+                    alt='Carro azul economico'
+                    type='Intermediário'
+                    names='Ford KA Sedan | Nissan March'
+                    fuel='Diesel/Gasolina'
+                    potency='1.0 ou mais'
+                />
+
+                <hr/>
+
+                <PromotionalCard
+                    src={suv}
+                    alt='Carro azul economico'
+                    type='SUV'
+                    names='Jeep Compass | Volkswagen T-Cross'
+                    fuel='Diesel/Gasolina'
+                    potency='1.0 ou mais'
+                />
+            </div>
+            
+
+            <h2>Fale com uma de nossas colaboradoras</h2>
+
+            <div className="contact">
+                <div>
+                    <a target="_blank" href="www.google.com" className="contact-person">
+                        <img src={workerOne} alt="foto"/> 
+                        <Icon icon={whatsappIcon} className="whatsapp"  />
+                    </a>
+                </div>
+
+                <div>
+                    <a target="_blank" href="www.google.com" className="contact-person">
+                        <img src={workerTwo} alt="foto"/> 
+                        <Icon icon={whatsappIcon} className="whatsapp"  />
+                    </a>
+                </div>
+
+                <div>
+                    <a target="_blank" href="www.google.com" className="contact-person">
+                        <img src={workerThree} alt="foto"/> 
+                        <Icon icon={whatsappIcon} className="whatsapp"  />
+                    </a>
+                </div>
+            </div>
 
             <Footer/>
         </div>

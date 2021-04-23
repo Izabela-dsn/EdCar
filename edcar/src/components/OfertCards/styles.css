@@ -1,0 +1,36 @@
+.card{
+    display: flex;
+    background-color: var(--color-blue-not-so-strong);
+    margin: 0 5rem 2rem 5rem;
+    color: white;
+    border-radius: 10px;
+}
+
+.image img{
+    width: 95%;
+    border-radius: 10px 0 0 10px;
+}
+
+.card .image{
+    display: flex;
+    align-items: center;
+}
+
+.information{
+    padding-top: 2.5rem;
+    padding-left: 2.5rem;
+}
+
+.information .type-car{
+    font: 400 48px 'Open Sans';
+    margin-bottom: 1rem;
+}
+
+.information .car{
+    font: 400 24px 'Open Sans';
+}
+
+.information .about-more{
+    font: 400 20px 'Open Sans';
+    margin-top: 2rem;
+}
