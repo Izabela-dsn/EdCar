@@ -11,7 +11,7 @@ function Header () {
             <div className="buttons-login">
                 <a href="#">Cadastre-se</a>
                 <hr/>
-                <a href="#">Login</a>   
+                <a href="/login">Login</a>   
             </div>
         </header>
     );   
