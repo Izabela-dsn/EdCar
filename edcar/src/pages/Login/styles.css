@@ -1,6 +1,13 @@
 .login-page{
     display: flex;
+}
+.banner-lateral{
+    display: flex;
+}
 
+.banner-lateral a{
+    background-color: black;
+    padding: 1rem 0 0 1rem;
 }
 
 .banner-lateral img{
@@ -37,6 +44,8 @@ form .input-field:first-child{
     outline: none;
     border: none;
     font: 400 20px 'Open Sans';
+
+    width: 25rem;
 }
 
 form .input-field .underline::before{

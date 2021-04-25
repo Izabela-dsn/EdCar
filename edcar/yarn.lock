@@ -1216,6 +1216,11 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@iconify/icons-fluent@^1.1.12":
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-fluent/-/icons-fluent-1.1.12.tgz#13aa3527e2a332a1e22c05b8d6b0d3a898a942e1"
+  integrity sha512-6uqPLKy8vv0WJ8o3mzdPo8zM3ojW2KUQBsmNOqVdR+pa3mrKMc4bEvUIXG8JCtkh+QSJL9EsoTHljdd+X8xitw==
+
 "@iconify/icons-logos@^1.1.9":
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/@iconify/icons-logos/-/icons-logos-1.1.9.tgz#c203026fcae11a2db2b362f1ed6597803a0fe89f"
