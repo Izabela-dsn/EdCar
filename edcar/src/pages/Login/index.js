@@ -47,7 +47,7 @@ function Login (){
                 <hr/>
 
                 <p>Ainda não tem uma conta?</p>
-                <button> Cadastre-se </button>
+                <a href="/cadastro" className="register-button"> Cadastre-se </a>
             </div>
             
         </div>
