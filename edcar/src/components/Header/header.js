@@ -9,7 +9,7 @@ function Header () {
             </div>
             
             <div className="buttons-login">
-                <a href="#">Cadastre-se</a>
+                <a href="/cadastro">Cadastre-se</a>
                 <hr/>
                 <a href="/login">Login</a>   
             </div>
