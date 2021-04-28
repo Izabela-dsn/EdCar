@@ -1,0 +1,12 @@
+.tab-elements{
+    margin-top: 5rem;
+}
+.tab-elements hr{
+    margin: 1rem 4rem 5rem 4rem;
+}
+
+.principal-elements{
+    display: flex;
+    justify-content: space-around;
+}
+
