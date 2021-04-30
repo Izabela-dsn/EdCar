@@ -2,11 +2,11 @@
     margin-top: 5rem;
 }
 .tab-elements hr{
-    margin: 1rem 4rem 5rem 4rem;
+    margin: 1rem -1rem 5rem -1rem;
 }
 
 .principal-elements{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
