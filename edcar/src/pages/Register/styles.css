@@ -1,0 +1,101 @@
+main{
+    margin: 0 5rem 0 5rem;
+}
+
+.page-register .title{
+    font: 400 48px 'Noto Sans';
+    margin: 4rem 0 4rem 0;
+}
+
+.personal-data,
+.addresses{
+    width: 20rem;
+    padding: 0.5rem 0;
+
+    border-radius: 10px;
+    border-style: none;
+    background-color: var(--color-gray-clear);
+    color: black;
+    cursor: pointer;
+
+    font: 400 18px 'Open Sans';
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.personal-data:hover,
+.addresses:hover{
+    background-color: var(--color-orange-not-so-strong);
+}
+
+.form-primary{
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+}
+
+.form-primary form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.form-primary .passwords{
+    margin-top: 1rem;
+}
+
+.form-primary .btn,
+.form-secondary .btn{
+    display: flex;
+    margin-top: 10rem;
+    margin-left: -10rem;
+}
+
+.form-primary button,
+.form-secondary button{
+    width: 15rem;
+    padding: 0.5rem 0;
+
+    border-radius: 10px;
+    border: 3px solid var(--color-blue-not-so-strong);
+    background: transparent;
+    color: black;
+    cursor: pointer;
+
+    font: 400 18px 'Open Sans';
+}
+
+.form-secondary{
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+}
+
+.form-secondary form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-secondary form .address-two{
+    margin-left: -5rem;
+}
+
+.form-secondary form h2{
+    margin-bottom: 2rem;
+    font: 400 30px 'Open Sans';
+}
+
+
+.form-secondary .agreement label{
+    margin-left: 1rem;
+    font: 400 18px 'Open Sans';
+}
+
+.form-secondary .agreement input{
+    border-radius: 10px;
+}
+
+.form-secondary .btn{
+    margin-left: 20rem;
+    margin-top: 2rem;
+}
+
+

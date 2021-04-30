@@ -11,6 +11,11 @@ import mailIcon from '../../assets/images/mailIcon.svg';
 import phoneIcon from '../../assets/images/phoneIcon.svg';
 import passwordIcon from '../../assets/images/passwordIcon.svg';
 import whatasppIcon from '../../assets/images/mdi_whatsapp.svg';
+import cepIcon from '../../assets/images/cepIcon.svg';
+import locationIcon from '../../assets/images/locationIcon.svg';
+import mylocationIcon from '../../assets/images/mylocationIcon.svg';
+
+
 
 
 import './styles.css'
@@ -29,7 +34,7 @@ function Register(){
                 </Tabs>
 
 
-                <div className="form-primary" hidden>
+                <div className="form-primary" >
                     <form>
                         <Field
                             icon={personIcon}
@@ -106,54 +111,62 @@ function Register(){
 
                 </div>
 
-                <div className="secondary-form" >
+                <div className="form-secondary" >
                     <form> 
-                        <div>
+                        <div className="address-one">
                             <h2>
                                 Endereço 1
                             </h2>
                             <Field
-                                type="number" 
-                                name="cep" 
-                                placeholder="CEP"
+                                type="number" name="cep" placeholder="CEP" icon={cepIcon} alt="cep"
                             />
 
                             <Field
-                                type="text" name="nome" placeholder="Estado"
+                                type="text" name="estado" placeholder="Estado" icon={mylocationIcon} alt="estado"
                             />
                             <Field
-                                type="text" name="nome" placeholder="Cidade"
+                                type="text" name="cidade" placeholder="Cidade" icon={mylocationIcon} alt="cidade"
                             />
                             <Field
-                                type="text" name="nome" placeholder="Endereço"
+                                type="text" name="endereco" placeholder="Endereço" icon={locationIcon} alt="endereço"
+                            />
+                            <Field
+                                type="text" name="numero" placeholder="Número" icon={locationIcon} alt="numero"
                             />
                         </div>  
 
-                        <div>
+                        <div className="address-two">
                             <h2>
                                 Endereço 2
                             </h2>
                             <Field
-                                type="number" 
-                                name="cep" 
-                                placeholder="CEP"
+                                type="number" name="cep" placeholder="CEP" icon={cepIcon} alt="cep"
                             />
 
                             <Field
-                                type="text" name="nome" placeholder="Estado"
+                                type="text" name="estado" placeholder="Estado" icon={mylocationIcon} alt="estado"
                             />
                             <Field
-                                type="text" name="nome" placeholder="Cidade"
+                                type="text" name="cidade" placeholder="Cidade" icon={mylocationIcon} alt="cidade"
                             />
                             <Field
-                                type="text" name="nome" placeholder="Endereço"
+                                type="text" name="endereco" placeholder="Endereço" icon={locationIcon} alt="endereço"
+                            />
+                            <Field
+                                type="text" name="numero" placeholder="Número" icon={locationIcon} alt="numero"
                             />
                         </div> 
 
-                        <input type="checkbox" required/>
-                        <label>Concordo com os Termos e o Contrato</label>
-                            
-                        <button>Próximo</button>
+                        <div className="agreement-button">
+                            <div className="agreement">
+                                <input type="checkbox" required/>
+                                <label>Concordo com os Termos e o Contrato</label>
+                            </div>
+                                
+                            <div className="btn">
+                                <button>Próximo</button>
+                            </div>     
+                        </div>
                     </form>
 
 
