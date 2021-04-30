@@ -1,13 +1,26 @@
 import React from 'react';
+
+import Field from '../../components/Field';
+
 import { Icon } from '@iconify/react';
 import facebookIcon from '@iconify/icons-logos/facebook';
 import google from '@iconify/icons-logos/google-icon';
 import arrowBack from '@iconify/icons-fluent/arrow-step-back-16-regular';
-import './styles.css';
+
 import banner from '../../assets/images/Login.svg';
+import mailIcon from '../../assets/images/mailIcon.svg';
+import passwordIcon from '../../assets/images/passwordIcon.svg';
+
+
+import './styles.css';
 
 
 function Login (){
+
+    let info = document.getElementsByTagName("email");
+    let inp = info.length
+    console.log(inp);
+
     return(
         
         <div className="login-page">
@@ -23,15 +36,21 @@ function Login (){
                 <h1>Login</h1>
 
                 <form>
-                    <div className="input-field">
-                        <input type="email" name="email" placeholder="Email"/>
-                        <div className="underline"></div>
-                    </div>
+                    <Field
+                        icon={mailIcon}
+                        alt="pessoas"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                    />
 
-                    <div className="input-field">
-                        <input type="password" name="senha" placeholder="Senha"/>
-                        <div className="underline"></div>
-                    </div>
+
+                    <Field
+                        icon={passwordIcon}
+                        type="password"
+                        name="senha"
+                        placeholder="Senha"
+                    />
 
                     <a href="#">Esqueci minha senha</a>
 

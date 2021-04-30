@@ -31,32 +31,6 @@
     flex-direction: column;
 }
 
-form .input-field:first-child{
-    margin-bottom: 3rem;
-}
-
-.input-field{
-    position: relative;
-    margin-right: 10rem;
-}
-
-.input-field input{
-    outline: none;
-    border: none;
-    font: 400 20px 'Open Sans';
-
-    width: 25rem;
-}
-
-form .input-field .underline::before{
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 25rem;
-    bottom: -4px;
-    background: black;
-}
-
 .form-login form a{
     text-align: right;
     text-decoration: none;
