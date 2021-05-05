@@ -4,9 +4,9 @@ import './styles.css';
 function Header () {
     return(
         <header>
-            <div className="logo">
+            <a href="/" className="logo">
                 <h1>EdCar</h1>
-            </div>
+            </a>
             
             <div className="buttons-login">
                 <a href="/cadastro">Cadastre-se</a>
