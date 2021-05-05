@@ -11,22 +11,25 @@
 .banner p{
     color: white;
     font: 400 32px 'Noto Sans';
+    margin-bottom: 2rem;
 }
 .banner img{
     width: 60%;
 }
-.banner button{
+.banner a{
     width: 13rem;
-    height: 2.9rem;
+    height: 5rem;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
     border: 2px solid var(--color-orange-strong);
     background-color: var(--color-orange-strong);
     cursor: pointer;
-
-    margin-top: 2rem;
+    color: black;
+    
     margin-left: 3.5rem;
 
     font: 400 24px 'Open Sans';
+    text-decoration: none;
 }
 
 .mini-banner{

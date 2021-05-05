@@ -2,8 +2,8 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 
 import './styles.css'
-import Footer from '../../components/Footer/footer';
-import Header from '../../components/Header/header';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 import PromotionalCard from '../../components/OfertCards';
 import whatsappIcon from '@iconify/icons-logos/whatsapp';
 
@@ -22,7 +22,7 @@ function Landing (){
             <div className="banner">
                 <div className="call-to-action">
                     <p>Os melhores automoveis da região especialmente para você.</p>
-                    <button>Quero alugar</button>
+                    <a href="/reserva/carro">Quero alugar</a>
                 </div>
                 <img src={bannerImg} alt="Fundo preto com as laterais de dois carros."/>
             </div>
@@ -41,6 +41,7 @@ function Landing (){
                     names='Renault Kwid | Fiat Mobi | Fiat Argo'
                     fuel='Diesel/Gasolina'
                     potency='1.0'
+                    more="Saiba mais..."
                 />
 
                 <hr/>
@@ -52,6 +53,8 @@ function Landing (){
                     names='Ford KA Sedan | Nissan March'
                     fuel='Diesel/Gasolina'
                     potency='1.0 ou mais'
+                    more="Saiba mais..."
+
                 />
 
                 <hr/>
@@ -63,6 +66,8 @@ function Landing (){
                     names='Jeep Compass | Volkswagen T-Cross'
                     fuel='Diesel/Gasolina'
                     potency='1.0 ou mais'
+                    more="Saiba mais..."
+
                 />
             </div>
             
