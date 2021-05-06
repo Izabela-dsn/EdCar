@@ -1,8 +1,8 @@
 import React from 'react';
-import './styles.css'
+import './styles.css';
 import PropTypes from 'prop-types';
 
-function PromotionalCard ({src, alt, type, names, fuel, potency}){
+function PromotionalCard ({src, alt, type, names, fuel, potency, more}){
     return(
         <div className="card">
             <div className='image'>
@@ -13,7 +13,7 @@ function PromotionalCard ({src, alt, type, names, fuel, potency}){
                 <p className="car">{names}</p>
                 <p className="car">{fuel}</p>
                 <p className="car">{potency}</p>
-                <p className="about-more">Saiba mais...</p>
+                <p className="about-more">{more}</p>
             </div>
         </div>
     );
@@ -26,6 +26,7 @@ PromotionalCard.propTypes = {
     names: PropTypes.string.isRequired,
     fuel: PropTypes.string.isRequired,
     potency: PropTypes.string.isRequired,
+    more: PropTypes.node.isRequired,
 };
 
 export default PromotionalCard;
