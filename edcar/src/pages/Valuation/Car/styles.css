@@ -69,6 +69,7 @@ main{
 }
 
 .resume .box-information h2{
+    margin-top: 1.5rem;
     text-align: center;
     font: 400 24px 'Open Sans';
 }
@@ -77,10 +78,15 @@ main{
     border: 1px solid var(--color-orange-strong);
     margin: -0.2rem 0 2rem 0;
     width: 22%;
+    margin-left: 39%;
 }
 
-.resume .box-information hr{
-    margin-left: 39%;
+.resume .box-information .resume-of-address hr{
+    width: 31%;
+}
+
+.resume .box-information .resume-of-address hr:nth-child(2){
+    width: 25%;
 }
 
 .resume .box-information .resume-of-car h3{

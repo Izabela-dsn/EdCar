@@ -45,7 +45,7 @@ function Cars(){
                                     name="Renault Kwid | Fiat Mobi | Renault Sandero"
                                     fuel="Gasolina/Diesel"
                                     more="Diária"
-                                    price="R$ 210,00"
+                                    price="R$ 80,00"
                                     onClick={abaco}
                                 />
 
@@ -56,7 +56,7 @@ function Cars(){
                                     name="Renault Kwid | Fiat Mobi | Renault Sandero"
                                     fuel="Gasolina/Diesel"
                                     more="Diária"
-                                    price="R$ 210,00"
+                                    price="R$ 120,00"
                                     onClick={abaco}
                                 />
 
@@ -153,7 +153,7 @@ function Cars(){
                                     <h4>Retirada</h4>
                                     <hr/>
                                     <p>Endereço 1</p>
-                                    <h4>Entrega</h4>
+                                    <h4>Devolução</h4>
                                     <hr/>
                                     <p>Endereço 2</p>
                                 </div>
