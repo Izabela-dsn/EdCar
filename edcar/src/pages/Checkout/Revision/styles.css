@@ -1,0 +1,71 @@
+.revision-page main h1{
+    font: 400 48px 'Noto Sans';
+    margin-bottom: 5rem;
+}
+
+.revision-page h2{
+    margin-bottom: 2rem;
+    font: 400 30px 'Open Sans';
+}
+
+.revision-page .person-data{
+    margin-left: 3rem;
+}
+
+.revision-page .person-data p{
+    display: inline;
+    font: 400 20px 'Open Sans';
+}
+
+.revision-page .person-data p:nth-child(2){
+    margin: 0 3rem;
+}
+
+.revision-page .order-data{
+    margin: 3rem 0 10rem 0;
+}
+
+.revision-page .order-data .about-the-car{
+    margin: 0 0 2rem 3rem;
+    background-color: var(--color-gray-table);
+    padding: 1rem;
+    font: 400 20px 'Open Sans';
+
+}
+
+.revision-page .order-data .about-the-car p:nth-child(2){
+    margin: 1rem 0 1rem 0;
+}
+
+.revision-page .order-data .about-the-address{
+    margin: 0 0 0 3rem;
+}
+
+.revision-page .order-data .about-the-address p{
+    font: 400 20px 'Open Sans';
+}
+
+.revision-page .order-data .about-the-address p:nth-child(2),
+.revision-page .order-data .about-the-address p:nth-child(4){
+    background-color: var(--color-gray-table);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.revision-page main a{
+    padding: 0.3rem 4rem;
+    margin-left: 27rem;
+    
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    background: transparent;
+    border: 3px solid var(--color-blue-not-so-strong);
+    cursor: pointer;
+
+    font: 400 20px 'Open Sans';
+}
+
+.revision-page main{
+    margin-bottom: 10rem;
+}
