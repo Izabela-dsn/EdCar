@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 function Header () {
     return(
         <header>
-            <a href="/" className="logo">
+            <Link to="/" className="logo">
                 <h1>EdCar</h1>
-            </a>
+            </Link>
             
             <div className="buttons-login">
-                <a href="/cadastro">Cadastre-se</a>
+                <Link to="/cadastro">Cadastre-se</Link>
                 <hr/>
-                <a href="/login">Login</a>   
+                <Link to="/login">Login</Link>   
             </div>
         </header>
     );   

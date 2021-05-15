@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 import Field from '../../components/Field';
 
 import { Icon } from '@iconify/react';
@@ -25,9 +25,9 @@ function Login (){
         
         <div className="login-page">
             <div className="banner-lateral">
-                <a href="/">
+                <Link to="/" className="button-go-back">
                     <Icon className="goBack" icon={arrowBack} style={{color: '#fff', fontSize: '32px'}} />
-                </a>
+                </Link>
                 <img src={banner} alt="banner lateral"/>
             </div>
 
@@ -66,7 +66,7 @@ function Login (){
                 <hr/>
 
                 <p>Ainda não tem uma conta?</p>
-                <a href="/cadastro" className="register-button"> Cadastre-se </a>
+                <Link to="/cadastro" className="register-button"> Cadastre-se </Link>
             </div>
             
         </div>

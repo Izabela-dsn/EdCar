@@ -5,7 +5,7 @@
     display: flex;
 }
 
-.banner-lateral a{
+.banner-lateral .button-go-back{
     background-color: black;
     padding: 1rem 0 0 1rem;
 }

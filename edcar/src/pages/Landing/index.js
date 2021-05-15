@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 import './styles.css'
@@ -22,7 +23,7 @@ function Landing (){
             <div className="banner">
                 <div className="call-to-action">
                     <p>Os melhores automoveis da região especialmente para você.</p>
-                    <a href="/reserva/carro">Quero alugar</a>
+                    <Link to="/reserva/carro" className="a">Quero alugar</Link>
                 </div>
                 <img src={bannerImg} alt="Fundo preto com as laterais de dois carros."/>
             </div>
@@ -76,21 +77,21 @@ function Landing (){
 
             <div className="contact">
                 <div>
-                    <a target="_blank" href="www.google.com" className="contact-person">
+                    <a target="_blank" href="https://www.google.com" className="contact-person">
                         <img src={workerOne} alt="foto"/> 
                         <Icon icon={whatsappIcon} className="whatsapp"  />
                     </a>
                 </div>
 
                 <div>
-                    <a target="_blank" href="www.google.com" className="contact-person">
+                    <a target="_blank" href="https://www.google.com" className="contact-person">
                         <img src={workerTwo} alt="foto"/> 
                         <Icon icon={whatsappIcon} className="whatsapp"  />
                     </a>
                 </div>
 
                 <div>
-                    <a target="_blank" href="www.google.com" className="contact-person">
+                    <a target="_blank" href="https://www.google.com" className="contact-person">
                         <img src={workerThree} alt="foto"/> 
                         <Icon icon={whatsappIcon} className="whatsapp"  />
                     </a>
