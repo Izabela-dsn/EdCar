@@ -1,5 +1,7 @@
 main h1{
     margin-bottom: 5rem;
+    font: 400 48px 'Noto Sans';
+
 }
 
 .payment{
