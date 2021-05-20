@@ -16,6 +16,7 @@ main h1{
 .show-payment .credit-card h2{
     text-align: center;
     margin: 0 0 2rem 0;
+    font: 400 26px "Open Sans";
 }
 
 .show-payment .credit-card img:nth-child(2){

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -15,12 +16,11 @@ import cepIcon from '../../assets/images/cepIcon.svg';
 import locationIcon from '../../assets/images/locationIcon.svg';
 import mylocationIcon from '../../assets/images/mylocationIcon.svg';
 
-
-
-
 import './styles.css'
 
+
 function Register(){
+
 
     return(
         <div className="page-register">
@@ -118,20 +118,20 @@ function Register(){
                                 Endereço 1
                             </h2>
                             <Field
-                                type="number" name="cep" placeholder="CEP" icon={cepIcon} alt="cep"
+                                type="number" name="cep" placeholder="CEP" icon={cepIcon} alt="cep" 
                             />
 
                             <Field
-                                type="text" name="estado" placeholder="Estado" icon={mylocationIcon} alt="estado"
+                                type="text" name="estado" placeholder="Estado" icon={mylocationIcon} alt="estado" 
                             />
                             <Field
-                                type="text" name="cidade" placeholder="Cidade" icon={mylocationIcon} alt="cidade"
+                                type="text" name="cidade" placeholder="Cidade" icon={mylocationIcon} alt="cidade" 
                             />
                             <Field
-                                type="text" name="endereco" placeholder="Endereço" icon={locationIcon} alt="endereço"
+                                type="text" name="endereco" placeholder="Endereço" icon={locationIcon} alt="endereço" 
                             />
                             <Field
-                                type="text" name="numero" placeholder="Número" icon={locationIcon} alt="numero"
+                                type="text" name="numero" placeholder="Número" icon={locationIcon} alt="numero" 
                             />
                         </div>  
 
@@ -164,7 +164,7 @@ function Register(){
                             </div>
                                 
                             <div className="btn">
-                                <button>Próximo</button>
+                                <Link to="/reserva/carro">Cadastrar</Link>
                             </div>     
                         </div>
                     </form>

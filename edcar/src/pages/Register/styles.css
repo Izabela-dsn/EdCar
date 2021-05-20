@@ -51,7 +51,7 @@ main{
 }
 
 .form-primary button,
-.form-secondary button{
+.form-secondary a{
     width: 15rem;
     padding: 0.5rem 0;
 
@@ -62,6 +62,11 @@ main{
     cursor: pointer;
 
     font: 400 18px 'Open Sans';
+}
+
+.form-secondary a{
+    text-align: center;
+    text-decoration: none;
 }
 
 .form-secondary{

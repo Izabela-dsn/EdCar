@@ -8,7 +8,7 @@ function Field ({icon, alt, type, name, onChange, placeholder}){
             <div className="input-field">
                 <div className="camp">
                     <img name="icon" src={icon} alt={alt}/>
-                    <input type={type} name={name} placeholder={placeholder} onChange={onChange}/>
+                    <input type={type} name={name} placeholder={placeholder} onChange={onChange} required/>
                 </div>
                 <div className="underline"></div>
             </div>

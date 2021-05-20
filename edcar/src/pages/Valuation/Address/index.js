@@ -77,7 +77,7 @@ function Address(){
                                     <p>EdCar Loja Centro 13/02/2025 9:30</p>
                                 </div>
 
-                                <button className="continue">Continuar</button>
+                                <button className="continue">Confirmar</button>
                             </div>
                         </div>
 
