@@ -1,0 +1,18 @@
+Como foi feito?
+
+1) Iniciamos os server, criamos uma pasta e dentro dela 
+foi dado o comando yarn init -y
+
+2) Criamos a pasta src e o arquivo server.js
+
+3) Para automatizar as atualizações/mudanças no servidor
+usamos o nodemon.
+
+4) Instalamos o nodemon localmente: yarn add nodemon --dev
+
+5) Adicionamos um script no package.json para rodar o back: 
+ "scripts": {
+    "start": "nodemon src/server.js"
+  },
+
+6) Instalamos o express(micro-framework): yarn add express
