@@ -1,0 +1,24 @@
+{
+  "usuario": [
+    {
+      "id": 0,
+      "nome": "Izabela da silva",
+      "CPF": "00000000000",
+      "email": "iza@gmail.com",
+      "CNH": "32323232323232",
+      "telefone": "34955555555",
+      "whatsapp": "34955555555",
+      "endereco_um": ["38412632", "Minas Gerais", "Uberlândia", "Rua Rosival", "225"],
+      "endereco_dois": ["38412632", "Minas Gerais", "Uberlândia", "Rua Rosival", "225"],
+      "senha": "lobster"
+    }
+  ],
+  "carros": [
+    {
+      "id": 0,
+      "modelo": "Ford Fiesta",
+      "potencia": "1.0",
+      "combustivel": "Gasolina"
+    }
+  ]
+}
