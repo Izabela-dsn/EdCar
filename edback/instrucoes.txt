@@ -15,4 +15,12 @@ usamos o nodemon.
     "start": "nodemon src/server.js"
   },
 
-6) Instalamos o express(micro-framework): yarn add express
+6) Instalamos o json-server e alimentamos o arquivo db.json com 
+nossos dados.
+
+7) No arquivo server.js arrumamos o json-server bonitinho, 
+criando, colocando em rota e ajustando a porta.
+
+8) Instalamos o axios no front e no back.
+
+9) 
