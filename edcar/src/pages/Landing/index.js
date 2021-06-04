@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect ,useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
+import api from '../../services/api';
+
 
 import './styles.css'
 import Footer from '../../components/Footer';
@@ -17,6 +19,17 @@ import workerTwo from '../../assets/images/worker2.svg';
 import workerThree from '../../assets/images/worker3.svg';
 
 function Landing (){
+    const[name, setName] = useState('');
+
+    useEffect(() => {
+        api.get('/usuario').then(response => {
+            console.log(response);
+            const info = response.data;
+            setName(info[0].nome);
+        })
+    }, []);
+
+
     return(
         <div className="landing">
             <Header/>

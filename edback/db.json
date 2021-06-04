@@ -8,9 +8,69 @@
       "CNH": "32323232323232",
       "telefone": "34955555555",
       "whatsapp": "34955555555",
-      "endereco_um": ["38412632", "Minas Gerais", "Uberlândia", "Rua Rosival", "225"],
-      "endereco_dois": ["38412632", "Minas Gerais", "Uberlândia", "Rua Rosival", "225"],
+      "endereco_um": [
+        "38412632",
+        "Minas Gerais",
+        "Uberlândia",
+        "Rua Rosival",
+        "225"
+      ],
+      "endereco_dois": [
+        "38412632",
+        "Minas Gerais",
+        "Uberlândia",
+        "Rua Rosival",
+        "225"
+      ],
       "senha": "lobster"
+    },
+    {
+      "nome": "Ana Maria Gonzales",
+      "CPF": "02458963741",
+      "email": "maria1000grau@gmail.com",
+      "CNH": "MG159852478",
+      "telefone": "34985412357",
+      "whatsapp": "34985412357",
+      "endereco_um": [
+        "38415236",
+        "Minas Gerais",
+        "Uberlândia",
+        "Rua Abroro Junqueira",
+        "225"
+      ],
+      "endereco_dois": [
+        "38415236",
+        "Minas Gerais",
+        "Uberlândia",
+        "Rua Abroro Junqueira",
+        "225"
+      ],
+      "senha": "password2000",
+      "id": 6
+    },
+    {
+      "nome": "Ana Maria Brega",
+      "CPF": "25536874495",
+      "email": "bresg@gmail.com",
+      "CNH": "MG125789634",
+      "telefone": "34956897850",
+      "whatsapp": "34956897850",
+      "endereco_um": [
+        "38569236",
+        "Minas Gerais",
+        "Uberlândia",
+        "Rua Gel de Coco, Martins",
+        "566"
+      ],
+      "endereco_dois": [
+        "38569236",
+        "Minas Gerais",
+        "Uberlândia",
+        "Rua Gel de Coco, Martins",
+        "566"
+      ],
+      "senha": "jujubamilgrau",
+      "id": 7
     }
   ],
   "carros": [

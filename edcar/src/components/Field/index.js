@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
 
-function Field ({icon, alt, type, name, onChange, placeholder}){
+function Field ({icon, alt, type, name, onChange, placeholder, required, value}){
     return(
         <div className="field">
             <div className="input-field">
                 <div className="camp">
                     <img name="icon" src={icon} alt={alt}/>
-                    <input type={type} name={name} placeholder={placeholder} onChange={onChange} required/>
+                    <input type={type} name={name} placeholder={placeholder} onChange={onChange} required={required} value={value}/>
                 </div>
                 <div className="underline"></div>
             </div>
@@ -19,6 +19,7 @@ function Field ({icon, alt, type, name, onChange, placeholder}){
 
 Field.defaultProps = {
     onChange: () => {},
+    value: '',
 };
 
 Field.propTypes = {
@@ -28,6 +29,8 @@ Field.propTypes = {
     name: PropTypes.string.isRequired,
     onChange: PropTypes.func,
     placeholder: PropTypes.string.isRequired,
+    required: PropTypes.string.isRequired,
+    value: PropTypes.string,
 };
 
 export default Field
