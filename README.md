@@ -7,7 +7,7 @@
 Tá ficando pronto ...
 
 ## Avisos ⚠️
-- Não há nenhum medida para a segurança dos dados da aplicação.
-- É meu primeiro projeto "solo".
+
+
 
 Acompanhe para mais atualizações...
