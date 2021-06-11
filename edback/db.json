@@ -5,9 +5,33 @@
       "nome": "Izabela da silva",
       "CPF": "00000000000",
       "email": "iza@gmail.com",
-      "CNH": "32323232323232",
-      "telefone": "34955555555",
-      "whatsapp": "34955555555",
+      "CNH": "null",
+      "telefone": "34991563697",
+      "whatsapp": "34991563697",
+      "endereco_um": [
+        "38412632",
+        "Minas Gerais",
+        "Uberlândia",
+        "Rua Rosival",
+        "245"
+      ],
+      "endereco_dois": [
+        "38412632",
+        "Minas Gerais",
+        "Uberlândia",
+        "Rua Rosival",
+        "285"
+      ],
+      "senha": "Lasnji12!"
+    },
+    {
+      "id": 1,
+      "nome": "Marie Langrange",
+      "CPF": "23657489658",
+      "email": "Ma@gmail.com",
+      "CNH": "null",
+      "telefone": "34988963756",
+      "whatsapp": "34988963756",
       "endereco_um": [
         "38412632",
         "Minas Gerais",
@@ -22,7 +46,7 @@
         "Rua Rosival",
         "225"
       ],
-      "senha": "lobster"
+      "senha": "lobsteria"
     },
     {
       "nome": "Ana Maria Gonzales",
@@ -81,4 +105,5 @@
       "combustivel": "Gasolina"
     }
   ]
+
 }
