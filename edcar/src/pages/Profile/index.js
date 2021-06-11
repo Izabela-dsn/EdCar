@@ -1,17 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import { Link , useHistory} from 'react-router-dom';
 import './styles.css';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 
-function Profile(){
+function Profile(props){
+    const name = props.location.state.detail || {}; 
+    console.log(name);
+
+
     return(
         <div>
             <Header/>
             <main>
-                <h1>Olá, user_name</h1>
+                <h1>Olá, {name}</h1>
                 <p>Reserva atual</p>
                 <div className="reservation">
                     <p>Data</p>

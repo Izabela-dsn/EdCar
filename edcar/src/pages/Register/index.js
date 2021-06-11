@@ -1,7 +1,6 @@
 import React, { useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
-import axios from 'axios';
 
 
 import Header from '../../components/Header';
@@ -100,13 +99,14 @@ function Register(){
                 //verificação dos dados guardados
                 console.log(infoJson);
             }catch{
-                window.alert('Não foi possivel guardar os dados, se o erro persistir constate o administrador.')
+                window.alert('Não foi possivel guardar os dados, se o erro persistir contate o administrador.')
             }
         }
         try{
             var response = await api.post("/usuario/", 
             infoJson, 
             {hearders:{"Content-Type":"application/json"}});
+            
             console.log(response.data);
             history.push('/');
         }

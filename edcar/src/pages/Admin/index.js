@@ -9,7 +9,8 @@ import Card from '../../components/Cards';
 import carOne from '../../assets/images/classic-card.svg';
 
 
-function Administration(){
+function Administration(props){
+    const adminName = props.location.state.detail || {};
 
     //Troca entre abas
     const[tabs, setTabs] = useState('aluguel', 'carros', 'workers');
@@ -28,7 +29,7 @@ function Administration(){
         <div>
             <Header/>
             <main>
-                <h1>Olá, Izabela</h1>
+                <h1>Olá, {adminName}</h1>
                 <Tabs>
                     <button type="button" className="tab" onClick={viewtabone}>Aluguel</button>
                     <button type="button" className="tab" onClick={viewtabtwo}>Carros disponiveis</button>

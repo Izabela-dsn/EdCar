@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
 
-function Card ({src, alt, type, name, fuel, potency, more, price, onClick}){
+function Card ({src, alt, type, name, fuel, potency, more, price, onClick, value, id, onChange}){
     return(
-        <div className="general-cards" onClick={onClick}>
+        <div className="general-cards" onClick={onClick} value={value} id={id} onChange={onChange}>
             <div className='car-images'>
                 <img src={src} alt={alt}/>
             </div>
@@ -30,6 +30,9 @@ Card.propTypes = {
     more: PropTypes.node,
     price: PropTypes.string,
     onClick: PropTypes.func,
+    value: PropTypes.string,
+    id: PropTypes.string,
+    onChange: PropTypes.func,
 };
 
 export default Card;
