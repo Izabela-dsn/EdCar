@@ -104,6 +104,53 @@
       "potencia": "1.0",
       "combustivel": "Gasolina"
     }
+  ],
+  "pedidos": [
+    {
+      "id": 0,
+      "dataPedido": "Jun 17, 2021 6:45 PM",
+      "retirada": [
+        "EdCar Loja Centro - Rua Santos Dumont",
+        "21/06/2021",
+        "12:00"
+      ],
+      "devolucao": [
+        "EdCar Loja Centro - Rua Santos Dumont",
+        "23/06/2021",
+        "12:00"
+      ],
+      "taxas": [
+        "Uso de Terceiros R$ 35,00",
+        "",
+        "",
+        ""
+      ],
+      "valorDiaria": "80",
+      "tipo": "Econômico",
+      "cliente": "Ana Maria Gonzales"
+    },
+    {
+      "dataPedido": "Jun 17, 2021 7:01 PM",
+      "retirada": [
+        "EdCar Loja Centro - Rua Santos Dumont",
+        "30/06/2021",
+        "13:00"
+      ],
+      "devolucao": [
+        "EdCar Loja Centro - Rua Santos Dumont",
+        "03/07/2021",
+        "15:05"
+      ],
+      "taxas": [
+        "Uso de Terceiros R$ 35,00",
+        "Assento para bebê R$ 25,00",
+        "",
+        "Proteção Completa R$ 50,00"
+      ],
+      "valorDiaria": "80",
+      "tipo": "Econômico",
+      "cliente": "",
+      "id": 1
+    }
   ]
-
 }
