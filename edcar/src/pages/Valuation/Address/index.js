@@ -1,11 +1,106 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { useHistory } from 'react-router-dom';
+
 import Footer from '../../../components/Footer';
 import Header from '../../../components/Header';
+import moment from 'moment';
 
 import './styles.css';
+import api from '../../../services/api';
 
 
-function Address(){
+function Address(props){
+    //receber informações da página anterior
+    const information = props.location.state.information || {};
+
+    const[endEntrega, setEndEntrega] = useState('');
+    const[endRetirada, setEndRetirada] = useState('');
+    const[dataRetirada, setDataRetirada] = useState('');
+    const[dataEntrega, setDataEntrega] = useState('');
+    const[horaRetirada, setHoraRetirada] = useState('');
+    const[horaEntrega, setHoraEntrega] = useState('');
+    const history = useHistory();
+
+    
+    //receber as taxas e percorrer elas para colocar no html 
+    const taxes = information.taxas;
+    const taxesList = taxes.map((tax) => <p key={tax}>{tax}</p>);
+    
+    //Transformação de data para padrão dd/mm/aaaa
+    const data = new Date(dataRetirada);
+    const dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
+
+    const data2 = new Date(dataEntrega);
+    const data2Formatada = data2.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
+    
+    //Guardar informações
+    //Calcular total (?)
+    
+    
+    async function handleSubmit() {
+        const actualTime = moment().format('lll');
+        var everythingIsCorrect = true;
+
+        //verificando dados
+        if(information.tipo === ''){
+            everythingIsCorrect = false;
+        }
+        if(information.valor === ''){
+            everythingIsCorrect = false;
+        }
+        if(taxesList === ''){
+            everythingIsCorrect = false;
+        }
+        if(endEntrega === ''){
+            everythingIsCorrect = false;
+        }
+        if(endRetirada === ''){
+            everythingIsCorrect = false;
+        }
+        if(dataFormatada === ''){
+            everythingIsCorrect = false;
+        }
+        if(data2Formatada === ''){
+            everythingIsCorrect = false;
+        }
+        if(horaRetirada === ''){
+            everythingIsCorrect = false;
+        }
+        if(horaEntrega === ''){
+            everythingIsCorrect = false;
+        }
+        if(!everythingIsCorrect){
+            window.alert('Verifique se você fez todas as suas escolhas!');
+        }
+        else{
+            try{
+                var infoPedido = {
+                    "dataPedido": actualTime,
+                    "retirada": [endRetirada, dataFormatada, horaRetirada],
+                    "devolucao" : [endEntrega, data2Formatada, horaEntrega],
+                    "taxas" : taxes,
+                    "valorDiaria" : information.valor,
+                    "tipo": information.tipo,
+                    "cliente": ""
+                }
+                console.log(infoPedido);
+            }catch{
+                window.alert('Não foi possivel enviar as informações.')
+            }
+        }
+        try{
+            var response = await api.post("/pedidos/", infoPedido, 
+            {headers:{"Content-Type":"application/json"}});
+            console.log(response.data);
+            history.push('/login');
+        }
+        catch{
+            console.log('erro o enviar');
+        }
+        
+    }
+
+
     return(
         <div className="address-page">
             <Header/>
@@ -21,18 +116,26 @@ function Address(){
                                 <p htmlFor="names">Endereço de retirada</p>
                                 <hr/>
 
-                                <input type="text" value="EdCar Loja Centro - Rua bla bla lorem kdjsaks kjafiweu" className="list-address" />
-                                <input type="text" value="EdCar Loja Centro - Rua bla bla lorem kdjsaks kjafiweu" className="list-address" />
+                                <input 
+                                    className="list-address" 
+                                    type="text" 
+                                    value="EdCar Loja Centro - Rua Santos Dumont" 
+                                    onClick={(e) => setEndRetirada(e.target.value)}
+                                />
+
+                                <input type="text" value="EdCar Loja Parque - Av Cesário Crosara" className="list-address" 
+                                    onClick={(e) => setEndRetirada(e.target.value)}
+                                />
 
                                 <p>Data e Hora</p>
                                 <hr/>
                                 <div className="date">
                                     <p>Data</p>
-                                    <input id="date" type="date"/>
+                                    <input id="date" type="date" onChange={(e) => setDataRetirada(e.target.value)}/>
                                 </div>
                                 <div className="time">
                                     <p>Hora</p>
-                                    <input type="time"/>
+                                    <input type="time" onChange={(e) => setHoraRetirada(e.target.value)}/>
                                 </div>
                             </div>
 
@@ -40,19 +143,28 @@ function Address(){
                                 <p>Endereço de devolução</p>
                                 <hr/>
 
-                                <input type="text" value="EdCar Loja Centro - Rua bla bla lorem kdjsaks kjafiweu" className="list-address" />
-                                <input type="text" value="EdCar Loja Centro - Rua bla bla lorem kdjsaks kjafiweu" className="list-address" />
+                                <input type="text" 
+                                    value="EdCar Loja Centro - Rua Santos Dumont" 
+                                    className="list-address" 
+                                    onClick={(e) => setEndEntrega(e.target.value)}
+                                />
+
+                                <input type="text" 
+                                    value="EdCar Loja Parque - Av Cesário Crosara" 
+                                    className="list-address" 
+                                    onClick={(e) => setEndEntrega(e.target.value)}
+                                />
 
 
                                 <p>Data e Hora</p>
                                 <hr/>
                                 <div className="date">
                                     <p>Data</p>
-                                    <input type="date"/>
+                                    <input type="date" onChange={(e) => setDataEntrega(e.target.value)}/>
                                 </div>
                                 <div className="time">
                                     <p>Hora</p>
-                                    <input type="time"/>
+                                    <input type="time" onChange={(e) => setHoraEntrega(e.target.value)}/>
                                 </div>
                             </div>
                                   
@@ -63,21 +175,21 @@ function Address(){
                                 <h2>Resumo</h2>
                                 <hr/>
                                 <div className="resume-of-car">
-                                    <h3>Economico</h3>
-                                    <p>Diária R$ 00,00</p>
-                                    <p>Taxas R$ 00,00</p>
+                                    <h3>{information.tipo}</h3>
+                                    <p>Diária R$ {information.valor},00</p>
+                                    {taxesList}
                                 </div>
                             
                                 <div className="resume-of-address">
                                     <h4>Retirada</h4>
                                     <hr/>
-                                    <p>EdCar Loja Centro 10/02/2025 9:30</p>
+                                    <p>{endRetirada} {dataFormatada} {horaRetirada}</p>
                                     <h4>Devolução</h4>
                                     <hr/>
-                                    <p>EdCar Loja Centro 13/02/2025 9:30</p>
+                                    <p>{endEntrega} {data2Formatada} {horaEntrega}</p>
                                 </div>
 
-                                <button className="continue">Confirmar</button>
+                                <button className="continue" type="submit" onClick={handleSubmit}>Confirmar</button>
                             </div>
                         </div>
 

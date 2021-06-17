@@ -1,11 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import { Link } from 'react-router-dom';
+import api from '../../../services/api';
+
 import './styles.css';
 
 
-function Resume(){
+function Resume(props){
+    const information =  props.location.state.detail || {}
+    
+    //informações sobre o cliente que está fazendo o pedido
+    const[nome, setNome] = useState('');
+    const[cpf, setCpf] = useState('');
+    const[telefone, setTelefone] = useState('');
+
+    useEffect(() =>{
+        setNome(information[0]);
+        setTelefone(information[1]);
+        setCpf(information[2]);
+
+        api.get('/pedidos').then(response => {
+            console.log(response.data);
+            //const info = response.data;
+            
+        })
+
+    }, []);
+
+    
+
+
+
+
     return(
         <div className="revision-page">
             <Header/>
@@ -13,9 +40,9 @@ function Resume(){
                 <h1>Revisão do pedido</h1>
                 <h2>Dados Pessoais</h2>
                 <div className="person-data">
-                    <p>Nome da Pessoa</p>
-                    <p>000.000.000.00</p>
-                    <p>(34) 9 0000-0000</p>
+                    <p>{nome}</p>
+                    <p>{cpf.substr(0,3)}.{cpf.substr(3,3)}.{cpf.substr(6,3)}.{cpf.substr(9,2)}</p>
+                    <p>({telefone.substr(0,2)}) 9 {telefone.substr(3,4)}-{telefone.substr(7,4)}</p>
                 </div>
                 <div className="order-data">
                     <h2>Pedido</h2>

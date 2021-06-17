@@ -45,6 +45,10 @@ function Login (){
                     if (email === infos[0].email && password === infos[0].senha){
                         history.push('/admin', {detail:  infos[0].nome});
                     }
+                    // login cliente especifico
+                    if (email === infos[1].email && password === infos[1].senha){
+                        history.push('/reserva/resumo', {detail: [infos[1].nome, infos[1].telefone, infos[1].CPF]});
+                    }
                     else{
                         //login de usuários normais
                         for(let info = 0; info < lop; info++){
