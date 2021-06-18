@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
-import { Link } from 'react-router-dom';
 import api from '../../../services/api';
+import { useHistory } from 'react-router-dom';
+
 
 import './styles.css';
+
 
 
 function Resume(props){
@@ -14,6 +16,10 @@ function Resume(props){
     const[nome, setNome] = useState('');
     const[cpf, setCpf] = useState('');
     const[telefone, setTelefone] = useState('');
+    const[ultimoPedido, setUltimoPedido] = useState('');
+    const[idUltimoPedido, setIdUltimoPedido] = useState('');
+    const history = useHistory();
+
 
     useEffect(() =>{
         setNome(information[0]);
@@ -21,17 +27,26 @@ function Resume(props){
         setCpf(information[2]);
 
         api.get('/pedidos').then(response => {
-            console.log(response.data);
-            //const info = response.data;
-            
+            const info = response.data;
+            setUltimoPedido(info[info.length - 1]);
         })
 
+        setIdUltimoPedido(String(ultimoPedido.id));
     }, []);
-
     
+    console.log(String(idUltimoPedido));
 
-
-
+    async function handleContinue() {
+        try{
+            var response = await api.patch(`/pedidos/${idUltimoPedido}`, {"cliente": nome},
+            {headers:{"Content-Type":"application/json"}});
+            console.log(response.data);
+            history.push('/reserva/pagamento');
+        }
+        catch{
+            window.alert("Não foi posssivel reservar tente novamente.")
+        }
+    }
 
     return(
         <div className="revision-page">
@@ -47,18 +62,18 @@ function Resume(props){
                 <div className="order-data">
                     <h2>Pedido</h2>
                     <div className="about-the-car">
-                        <p>Tipo de automovel:</p>
-                        <p>Diária:</p>
-                        <p>Adicionais:</p>
+                        <p>Tipo de automovel: {ultimoPedido.tipo}</p>
+                        <p>Diária: {ultimoPedido.valorDiaria}</p>
+                        <p>Adicionais: {ultimoPedido.taxas}</p>
                     </div>
                     <div className="about-the-address">
                         <p>Retirada</p>
-                        <p>Loja Centro <br/> Rua Rosival de Oliveira Melo, 222, Nova Uberlândia &emsp;&emsp; 09/11/2025 &emsp;&emsp; 10:45</p>
+                        <p>{ultimoPedido.retirada[0]} &emsp;&emsp; {ultimoPedido.retirada[1]} &emsp;&emsp; {ultimoPedido.retirada[2]}</p>
                         <p>Devolução</p>
-                        <p>Loja Centro <br/> Rua Rosival de Oliveira Melo, 222, Nova Uberlândia &emsp;&emsp; 09/11/2025 &emsp;&emsp; 10:45</p>
+                        <p>{ultimoPedido.devolucao[0]} &emsp;&emsp; {ultimoPedido.devolucao[1]} &emsp;&emsp; {ultimoPedido.devolucao[2]}</p>  
                     </div>
                 </div>
-                <Link to='/reserva/pagamento' className="continue-button">Continuar</Link>
+                <button className="continue-button" onClick={handleContinue}>Continuar</button>
             </main>
             <Footer/>
         </div>

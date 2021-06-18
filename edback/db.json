@@ -3,7 +3,7 @@
     {
       "id": 0,
       "nome": "Izabela da silva",
-      "CPF": "00000000000",
+      "CPF": "00000000001",
       "email": "iza@gmail.com",
       "CNH": "null",
       "telefone": "34991563697",
@@ -151,6 +151,52 @@
       "tipo": "Econômico",
       "cliente": "",
       "id": 1
+    },
+    {
+      "dataPedido": "Jun 17, 2021 8:28 PM",
+      "retirada": [
+        "EdCar Loja Parque - Av Cesário Crosara",
+        "25/06/2021",
+        "13:30"
+      ],
+      "devolucao": [
+        "EdCar Loja Parque - Av Cesário Crosara",
+        "30/06/2021",
+        "08:30"
+      ],
+      "taxas": [
+        "",
+        "",
+        "",
+        "Proteção Completa R$ 50,00"
+      ],
+      "valorDiaria": "550",
+      "tipo": "Coleção",
+      "cliente": "",
+      "id": 2
+    },
+    {
+      "dataPedido": "Jun 17, 2021 8:33 PM",
+      "retirada": [
+        "EdCar Loja Centro - Rua Santos Dumont",
+        "18/06/2021",
+        "11:35"
+      ],
+      "devolucao": [
+        "EdCar Loja Parque - Av Cesário Crosara",
+        "24/06/2021",
+        "17:30"
+      ],
+      "taxas": [
+        "Uso de Terceiros R$ 35,00",
+        "Assento para bebê R$ 25,00",
+        "Proteção Parcial R$ 20,00",
+        ""
+      ],
+      "valorDiaria": "80",
+      "tipo": "Econômico",
+      "cliente": "Marie Langrange",
+      "id": 3
     }
   ]
 }

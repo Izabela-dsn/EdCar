@@ -52,9 +52,9 @@
     padding: 1rem;
 }
 
-.revision-page main a{
+.revision-page main .continue-button{
     padding: 0.3rem 4rem;
-    margin-left: 27rem;
+    margin-left: 25rem;
     
     text-decoration: none;
     color: black;
