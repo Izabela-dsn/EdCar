@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import api from '../../../services/api';
-import { useHistory } from 'react-router-dom';
+import moment from 'moment';
 
 
 import './styles.css';
@@ -28,20 +29,38 @@ function Resume(props){
 
         api.get('/pedidos').then(response => {
             const info = response.data;
-            setUltimoPedido(info[info.length - 1]);
+            if (info === undefined){
+                console.log('Não ha dados');
+            }
+            else{
+                setUltimoPedido(info[info.length - 1]);
+            }
         })
 
-        setIdUltimoPedido(String(ultimoPedido.id));
-    }, []);
+        setIdUltimoPedido(ultimoPedido.id);
+    }, [history]);
     
-    console.log(String(idUltimoPedido));
+    console.log(ultimoPedido.id);
+
+    //Calculando valor total
+    
+    //pegando diferença de dias
+    var a = moment(ultimoPedido.dataretirada,'D/M/YYYY');
+    var b = moment(ultimoPedido.datadevolucao,'D/M/YYYY');
+    var diffDays = b.diff(a, 'days');
+    console.log(diffDays);
+
+    //calculando o valor 
+    var valorTotal = diffDays * ultimoPedido.valorDiaria;
+    console.log(valorTotal);
+
 
     async function handleContinue() {
         try{
-            var response = await api.patch(`/pedidos/${idUltimoPedido}`, {"cliente": nome},
+            var response = await api.patch(`/pedidos/${idUltimoPedido}`, {"cliente": nome, "valorTotal": valorTotal},
             {headers:{"Content-Type":"application/json"}});
             console.log(response.data);
-            history.push('/reserva/pagamento');
+            history.push('/reserva/pagamento', {infos: [idUltimoPedido, valorTotal]});
         }
         catch{
             window.alert("Não foi posssivel reservar tente novamente.")
@@ -52,7 +71,7 @@ function Resume(props){
         <div className="revision-page">
             <Header/>
             <main>
-                <h1>Revisão do pedido</h1>
+                <h1>Revisão do pedido </h1>
                 <h2>Dados Pessoais</h2>
                 <div className="person-data">
                     <p>{nome}</p>
@@ -63,15 +82,17 @@ function Resume(props){
                     <h2>Pedido</h2>
                     <div className="about-the-car">
                         <p>Tipo de automovel: {ultimoPedido.tipo}</p>
-                        <p>Diária: {ultimoPedido.valorDiaria}</p>
-                        <p>Adicionais: {ultimoPedido.taxas}</p>
+                        <p>Diária: R$ {ultimoPedido.valorDiaria}</p>
+                        <p>Adicionais: {ultimoPedido.taxas} </p>
                     </div>
+                    
                     <div className="about-the-address">
                         <p>Retirada</p>
-                        <p>{ultimoPedido.retirada[0]} &emsp;&emsp; {ultimoPedido.retirada[1]} &emsp;&emsp; {ultimoPedido.retirada[2]}</p>
+                        <p>{ultimoPedido.endretirada} &emsp;&emsp; {ultimoPedido.dataretirada} &emsp;&emsp; {ultimoPedido.horaretirada}</p>
                         <p>Devolução</p>
-                        <p>{ultimoPedido.devolucao[0]} &emsp;&emsp; {ultimoPedido.devolucao[1]} &emsp;&emsp; {ultimoPedido.devolucao[2]}</p>  
+                        <p>{ultimoPedido.enddevolucao} &emsp;&emsp; {ultimoPedido.datadevolucao} &emsp;&emsp; {ultimoPedido.horadevolucao}</p>
                     </div>
+                    
                 </div>
                 <button className="continue-button" onClick={handleContinue}>Continuar</button>
             </main>

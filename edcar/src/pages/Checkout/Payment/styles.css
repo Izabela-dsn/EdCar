@@ -142,7 +142,8 @@ main h1{
     font: 400 18px 'Open Sans';
 }
 
-.payment-choices p:nth-child(5){
+
+.payment-choices p:nth-child(4){
     margin: 4rem 0 1rem 0;
     text-align: center;
 }

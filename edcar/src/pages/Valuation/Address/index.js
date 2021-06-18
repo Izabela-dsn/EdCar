@@ -76,12 +76,18 @@ function Address(props){
             try{
                 var infoPedido = {
                     "dataPedido": actualTime,
-                    "retirada": [endRetirada, dataFormatada, horaRetirada],
-                    "devolucao" : [endEntrega, data2Formatada, horaEntrega],
+                    "endretirada": endRetirada,
+                    "dataretirada": dataFormatada,
+                    "horaretirada": horaRetirada,
+                    "enddevolucao" : endEntrega,
+                    "datadevolucao" : data2Formatada,
+                    "horadevolucao" : horaEntrega,
                     "taxas" : taxes,
                     "valorDiaria" : information.valor,
                     "tipo": information.tipo,
-                    "cliente": ""
+                    "cliente": "",
+                    "valorTotal": "",
+                    "pagamentoTipo": "",
                 }
                 console.log(infoPedido);
             }catch{

@@ -143,7 +143,7 @@ function Cars(){
                                             <img src={shareCar} alt="compatilhar"/>
                                             <p> Uso de Terceiros
                                             <br/>
-                                            R$ 35,00 / diária</p>
+                                            R$ 35,00</p>
                                         </button>
                                     </li>
 
@@ -153,7 +153,7 @@ function Cars(){
                                             <p>
                                                 Assento para bebê
                                                 <br/>
-                                                R$ 25,00 / diária
+                                                R$ 25,00
                                             </p>
                                         </button>
                                     </li>
@@ -165,7 +165,7 @@ function Cars(){
                                             <p>
                                                 Proteção Parcial
                                                 <br/>
-                                                R$ 20,00 / diária
+                                                R$ 20,00
                                             </p>
                                         </button>
                                     </li>
@@ -176,7 +176,7 @@ function Cars(){
                                             <p>
                                                 Proteção Completa
                                                 <br/>
-                                                R$ 50,00 / diária
+                                                R$ 50,00
                                             </p>
                                         </button>
                                     </li>
