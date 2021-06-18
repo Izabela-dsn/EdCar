@@ -51,7 +51,7 @@ function Login (){
                     }
                     else{
                         //login de usuários normais
-                        for(let info = 0; info < lop; info++){
+                        for(let info = 2; info < lop; info++){
                             //console.log(infos[info].email, infos[info].senha, 'email e senha');
                             if(email !== infos[info].email && password === infos[info].senha){
                                 window.alert('Email Incorreto')

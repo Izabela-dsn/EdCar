@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import './styles.css';
+import React, { useState, useEffect } from 'react';
+import { jsPDF } from 'jspdf';
+import api from '../../services/api';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Tabs from '../../components/Tabs';
 import Card from '../../components/Cards';
-
 import carOne from '../../assets/images/classic-card.svg';
+import './styles.css';
 
 
 function Administration(props){
     const adminName = props.location.state.detail || {};
+    const[pedidos, setPedidos] = useState([]);
 
     //Troca entre abas
     const[tabs, setTabs] = useState('aluguel', 'carros', 'workers');
@@ -24,6 +26,39 @@ function Administration(props){
         setTabs('workers');   
     }
 
+
+    //pegar pedidos e distribuir na tabela
+
+    useEffect(()=>{buscarPedidos()}, []); 
+
+    async function buscarPedidos(){
+        try{
+            api.get('/pedidos').then(response => {
+                //const info = response.data;
+                setPedidos(Object.values(response.data))
+            });
+
+        }catch{
+            window.alert("Não há nada aqui 0.0")
+        }
+    }
+
+    //Fazer pdf com os pedidos
+    function handlePDF(){
+        const doc = new jsPDF();
+
+        doc.text('EdCar - Relatório Geral', 70,10)
+        const ped = pedidos.map(pedido => (
+            doc.text(`Data do pedido: ${pedido.dataPedido}`, 10, 20),
+            doc.text(`Tipo de carro: ${pedido.tipo}`, 10, 30),
+            doc.text(`Valor total: ${pedido.valorTotal}`, 10, 40),
+            doc.text(`Cliente: ${pedido.cliente}`, 10, 60),
+            doc.text(`Retirada do carro na loja: ${pedido.dataretirada} ${pedido.horaretirada}`, 10, 70),
+            doc.text(`Devolução do carro na loja: ${pedido.datadevolucao} ${pedido.horadevolucao}`, 10, 80)
+        ));
+
+        doc.save("relatorioPedidos.pdf");
+    }
 
     return(
         <div>
@@ -40,7 +75,7 @@ function Administration(props){
                     <div className="aluguel" >
                         <div className="small-header">
                             <p>Aluguel</p>
-                            <button>Exportar para PDF</button>
+                            <button onClick={handlePDF}>Exportar para PDF</button>
                         </div>
                         <hr/>
 
@@ -68,35 +103,19 @@ function Administration(props){
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>11/04/2021</td>
-                                        <td>Adelaide mate norma reicarti</td>
-                                        <td>14/04/2021 <br/>12:30</td>
-                                        <td>21/04/2021 <br/>11:30</td>
-                                        <td>R$ 600,00</td>
-                                        <td>Intermediário</td>
-                                    </tr>
+                                    {pedidos ? pedidos.map(pedido =>(
+                                        <tr key={pedido.id}>
+                                            <td>{pedido.id}</td>
+                                            <td>{pedido.dataPedido}</td>
+                                            <td>{pedido.cliente}</td>
+                                            <td>{pedido.dataretirada} <br/>{pedido.horaretirada}</td>
+                                            <td>{pedido.datadevolucao}<br/>{pedido.horadevolucao}</td>
+                                            <td>R$ {pedido.valorTotal},00</td>
+                                            <td>{pedido.tipo}</td>
+                                        </tr>
+                                    )):null}
 
-                                    <tr>
-                                        <td>1</td>
-                                        <td>11/04/2021</td>
-                                        <td>Adelaide mate norma reicarti</td>
-                                        <td>14/04/2021 <br/>12:30</td>
-                                        <td>21/04/2021 <br/>11:30</td>
-                                        <td>R$ 600,00</td>
-                                        <td>Intermediário</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>1</td>
-                                        <td>11/04/2021</td>
-                                        <td>Adelaide mate norma reicarti</td>
-                                        <td>14/04/2021 <br/>12:30</td>
-                                        <td>21/04/2021 <br/>11:30</td>
-                                        <td>R$ 600,00</td>
-                                        <td>Intermediário</td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
 
@@ -196,14 +215,14 @@ function Administration(props){
 
                                 <tbody>
                                     <tr>
-                                        <td>Ramon Guimarães</td>
+                                        <td>Jessica Lange</td>
                                         <td>08:30 - 16:30</td>
                                         <td>34 9 91009324</td>
                                     </tr>
                                     <tr>
-                                        <td>Ramon Guimarães</td>
+                                        <td>Lisbela Lina</td>
                                         <td>08:30 - 16:30</td>
-                                        <td>34 9 91009324</td>
+                                        <td>34 9 91789324</td>
                                     </tr>
                                 </tbody>
                             </table>
