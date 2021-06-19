@@ -35,9 +35,9 @@ function Resume(props){
             else{
                 setUltimoPedido(info[info.length - 1]);
             }
+            setIdUltimoPedido(ultimoPedido.id);
         })
 
-        setIdUltimoPedido(ultimoPedido.id);
     }, [history]);
     
     console.log(ultimoPedido.id);

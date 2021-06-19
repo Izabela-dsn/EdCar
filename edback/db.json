@@ -95,6 +95,36 @@
       ],
       "senha": "jujubamilgrau",
       "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "nome": "Larissa Melken",
+      "CPF": "02245866675",
+      "email": "larie@gmail.com",
+      "CNH": "MG125789634",
+      "telefone": "34988965726",
+      "whatsapp": "34988965726",
+      "endereco_um": [
+        "36895632",
+        "MG",
+        "Uberlândia",
+        "Rua Martins, Marta Helena",
+        "255"
+      ],
+      "endereco_dois": [
+        "36895632",
+        "MG",
+        "Uberlândia",
+        "Rua Martins, Marta Helena",
+        "255"
+      ],
+      "senha": "jujubamaldosa",
+      "id": 10
     }
   ],
   "carros": [
@@ -147,6 +177,27 @@
       "valorTotal": 2100,
       "pagamentoTipo": "store",
       "id": 2
+    },
+    {
+      "dataPedido": "Jun 18, 2021 6:44 PM",
+      "endretirada": "EdCar Loja Parque - Av Cesário Crosara",
+      "dataretirada": "20/06/2021",
+      "horaretirada": "08:43",
+      "enddevolucao": "EdCar Loja Centro - Rua Santos Dumont",
+      "datadevolucao": "30/06/2021",
+      "horadevolucao": "11:55",
+      "taxas": [
+        "",
+        "",
+        "",
+        "Proteção Completa R$ 50,00"
+      ],
+      "valorDiaria": "210",
+      "tipo": "Executivo",
+      "cliente": "Marie Langrange",
+      "valorTotal": 2100,
+      "pagamentoTipo": "store",
+      "id": 3
     }
   ]
 }
