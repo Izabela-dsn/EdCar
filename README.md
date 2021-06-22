@@ -1,14 +1,15 @@
-# EdCar
+# EdCar - O melhor lugar para alugar automóveis da região!
 ## 📚 Projeto da universidade 📚
 
-### Codificação iniciada em 21/04/2021
-### Prazo de Entrega 18/06/2021
+#### Inicio em 21/04/2021 | Prazo de Entrega 18/06/2021
 
 ## Design lindo de bonito ❤️
-Tá ficando pronto ...
+Figma:  https://www.figma.com/file/kDWz1H3Gw77U0xmXUNNMAf/EdCar?node-id=0%3A1
 
-## Avisos ⚠️
 
+## Aprendizados 🤔
+* Primeiro grande projeto feito.
+* É preciso solidificar as bases em HTML/CSS e JS.
 
 
 Acompanhe para mais atualizações...
