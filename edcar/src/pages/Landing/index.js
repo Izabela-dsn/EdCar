@@ -7,7 +7,7 @@ import './styles.css'
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import PromotionalCard from '../../components/OfertCards';
-import whatsappIcon from '@iconify/icons-logos/whatsapp';
+import whatsappIcon from '@iconify/icons-logos/whatsapp-monochrome-icon';
 
 import bannerImg from '../../assets/images/banner3.svg';
 import economic from '../../assets/images/promoeconomic.svg';
