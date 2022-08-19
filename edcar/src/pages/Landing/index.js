@@ -18,17 +18,6 @@ import workerTwo from '../../assets/images/worker2.svg';
 import workerThree from '../../assets/images/worker3.svg';
 
 function Landing (){
-   /* const[name, setName] = useState('');
-
-    useEffect(() => {
-        api.get('/usuario').then(response => {
-            console.log(response);
-            const info = response.data;
-            setName(info[0].nome);
-        })
-    }, []);
-*/
-
     return(
         <div className="landing">
             <Header/>
