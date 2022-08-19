@@ -1,5 +1,5 @@
 .page-footer{
-    width: 100vw;
+    width: 100%;
     background-color: var(--color-blue-strong);
     display: flex;
     flex-wrap: wrap;
@@ -23,21 +23,13 @@
 .column-terms p,
 .column-contact p{
     padding-bottom: 1rem;
-    font-family: 'Open Sans',sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 33px;
+    font: 400 20px 'Open Sans',sans-serif;
 }
 
 .column-rights p{
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    font-family: 'Open Sans',sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 33px;
+    padding: 1rem 0 2rem 0;
+    font: 400 18px 'Open Sans',sans-serif;
+    text-align: center;
 }
 
 .column-contact .instagram,  
