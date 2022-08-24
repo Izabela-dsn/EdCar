@@ -1,7 +1,6 @@
 {
   "usuario": [
     {
-      "id": 0,
       "nome": "Izabela da silva",
       "CPF": "00000000001",
       "email": "iza@gmail.com",
@@ -25,7 +24,6 @@
       "senha": "Lasnji12!"
     },
     {
-      "id": 1,
       "nome": "Marie Langrange",
       "CPF": "23657489658",
       "email": "Ma@gmail.com",
@@ -97,12 +95,6 @@
       "id": 7
     },
     {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
       "nome": "Larissa Melken",
       "CPF": "02245866675",
       "email": "larie@gmail.com",
@@ -129,7 +121,6 @@
   ],
   "carros": [
     {
-      "id": 0,
       "modelo": "Ford Fiesta",
       "potencia": "1.0",
       "combustivel": "Gasolina"
