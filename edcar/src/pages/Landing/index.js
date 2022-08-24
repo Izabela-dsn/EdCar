@@ -78,21 +78,21 @@ function Landing (){
 
             <div className="contact">
                 <div>
-                    <a target="_blank" href="https://www.google.com" className="contact-person">
+                    <a target="_blank" rel="noreferrer" href="https://www.google.com" className="contact-person">
                         <img src={workerOne} alt="foto"/> 
                         <Icon icon={whatsappIcon} className="whatsapp"  />
                     </a>
                 </div>
 
                 <div>
-                    <a target="_blank" href="https://www.google.com" className="contact-person">
+                    <a target="_blank" rel="noreferrer" href="https://www.google.com" className="contact-person">
                         <img src={workerTwo} alt="foto"/> 
                         <Icon icon={whatsappIcon} className="whatsapp"  />
                     </a>
                 </div>
 
                 <div>
-                    <a target="_blank" href="https://www.google.com" className="contact-person">
+                    <a target="_blank" rel="noreferrer" href="https://www.google.com" className="contact-person">
                         <img src={workerThree} alt="foto"/> 
                         <Icon icon={whatsappIcon} className="whatsapp"  />
                     </a>

@@ -21,24 +21,43 @@ function Login (){
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
     const history = useHistory();
-
-    //Gambiarra para fazer o Login - NÃO FAÇA ISSO EM PRODUÇÃO OU SE ESTIVER TRABALHANDO 
-    //Gambiarra feita em 08/06/2021 para proposito de apresentaçao do trabalho 
-    //Temos 2 perfis: Admin e Cliente
+    const pattern = /^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/
     
     async function handleLogin(event){
         event.preventDefault();
         var everythingIsCorrect = true;
 
         //verificar se os campos estão corretos
+        console.log(pattern.test(email))
         if(password.length<8){
             everythingIsCorrect = false;
             window.alert('Senha precisa ter mais de 8 caracteres.')
         }
+        if(pattern.test(email) === false){
+            everythingIsCorrect = false;
+            window.alert('Email invalido.')
+        }
         else{
             try{
+                api.get("/usuario").then(res => {
+                    console.log(res.data)
+                    var users = res.data
+                    console.log(users)
+                    users.map((user)=>{
+                        // Login geral
+                        if(email === user.email && password === user.senha){
+                            window.alert("login feito com sucesso!!")
+                        }else{
+                            window.alert("Email ou senha incorretos")
+                        }
+                        // login de admin
+                        // login com produtos escolhidos
+                    })
+                })
+                /*
                 api.get('/usuario').then(response =>{
                     const infos = response.data;
+                    console.log(infos)
                     let lop = infos.length;
                     console.log(lop);
                     //login de admin
@@ -64,10 +83,10 @@ function Login (){
                                 history.push('/usuario', {detail: infos[info].nome});
                             }
                         }
-                    }
-                })
+                    })
+                }*/
             }catch{
-                console.log('eerro')
+                console.log('erro')
             }
         }
 
