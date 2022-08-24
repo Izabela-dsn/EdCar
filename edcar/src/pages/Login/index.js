@@ -6,7 +6,8 @@ import Field from '../../components/Field';
 import { Icon } from '@iconify/react';
 import facebookIcon from '@iconify/icons-logos/facebook';
 import google from '@iconify/icons-logos/google-icon';
-import arrowBack from '@iconify/icons-logos/google-icon';
+import arrowBack from '@iconify/icons-akar-icons/arrow-back';
+
 
 import banner from '../../assets/images/Login.svg';
 import mailIcon from '../../assets/images/mailIcon.svg';
