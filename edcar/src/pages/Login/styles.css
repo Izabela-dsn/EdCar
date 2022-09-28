@@ -16,14 +16,14 @@
 
 .form-login{
     padding-top: 3rem;
-    margin-left: -3rem;
+    margin-left: -4rem;
     width: 33vw;
 }
 
 .form-login h1{
-    font: 400 64px 'Noto Sans';
+    font: 400 48px 'Noto Sans';
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .form-login form{

@@ -6,9 +6,9 @@ function Field ({icon, alt, type, name, onChange, placeholder, required, value})
     return(
         <div className="field">
             <div className="input-field">
+                <label htmlFor="input" name={name}><img name="icon" src={icon} alt={alt}/> {name}</label>
                 <div className="camp">
-                    <img name="icon" src={icon} alt={alt}/>
-                    <input type={type} name={name} placeholder={placeholder} onChange={onChange} required={required} value={value}/>
+                    <input id='input' type={type} name={name} placeholder={placeholder} onChange={onChange} required={required} value={value}/>
                 </div>
                 <div className="underline"></div>
             </div>

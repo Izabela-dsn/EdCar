@@ -1,10 +1,14 @@
 main{
-    margin: 0 5rem 0 5rem;
+    margin: 0 5rem ;
 }
 
 .page-register .title{
-    font: 400 48px 'Noto Sans';
-    margin: 4rem 0 4rem 0;
+    font: 400 38px 'Noto Sans';
+    margin: 4rem 0;
+}
+
+.page-register .title legend{
+    font-size: 16px;
 }
 
 .personal-data,
@@ -29,8 +33,7 @@ main{
 }
 
 .form-primary{
-    margin-left: 5rem;
-    margin-bottom: 5rem;
+    margin: 0 0 5rem 5rem;
 }
 
 .form-primary form{
@@ -46,8 +49,8 @@ main{
 .form-primary .btn,
 .form-secondary .btn{
     display: flex;
-    margin-top: 10rem;
-    margin-left: -10rem;
+    justify-content: center;
+    margin-left: -5rem;
 }
 
 .form-primary button,
@@ -99,8 +102,9 @@ main{
 }
 
 .form-secondary .btn{
-    margin-left: 20rem;
-    margin-top: 2rem;
+    margin: 2rem 0 0 20rem;
+    justify-content: center;
+
 }
 
 

@@ -1,36 +1,42 @@
-.field{
-    display: flex;
-    align-items: baseline;
+.field {
+  display: flex;
+  align-items: baseline;
 }
 
-.input-field{
-    position: relative;
-    margin-bottom: 3rem;
+.input-field {
+  position: relative;
+  margin-bottom: 3rem;
 }
 
-.input-field .camp{
-    display: flex;
+.input-field label {
+  font: 400 18px "Open Sans";
+  display: flex;
+  justify-items: center;
+  gap: .2rem;
+  margin-bottom: .5rem;
 }
 
-.input-field input{
-    outline: none;
-    border: none;
-    font: 400 20px 'Open Sans';
+.input-field label img {
+  position: relative;
+  width: 20px;
+}
+.input-field .camp {
+  display: flex;
+}
+.input-field .camp input {
+  outline: none;
+  border: none;
+  font: 400 16px "Open Sans";
 
-    width: 25rem;
-    margin-left: 0.5rem;
+  width: 25rem;
+  margin-left: 0.5rem;
 }
 
-.input-field img{
-    position: relative;
-    width: 20px;
-}
-
-.input-field .underline::before{
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 25rem;
-    bottom: -4px;
-    background: black;
+.input-field .underline::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 25rem;
+  bottom: -4px;
+  background: black;
 }

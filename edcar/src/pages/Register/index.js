@@ -123,8 +123,9 @@ function Register(){
             <Header/>
             <main>
 
-                <h1 className="title">Cadastro</h1>
-                <p>Todas as informações são de preenchimento obrigatório.</p>
+                <h1 className="title">Cadastro
+                <legend>Todas as informações são de preenchimento obrigatório.</legend>
+                </h1>
                 <Tabs> 
                     <button className="personal-data" onClick={previous}>Dados Pessoais</button>
                     <button className="addresses" onClick={next}>Endereços</button>
@@ -137,9 +138,9 @@ function Register(){
                             <Field
                                 icon={personIcon}
                                 alt="pessoa"
-                                placeholder="Nome Completo"
+                                placeholder=""
                                 type="string"
-                                name="nome"
+                                name="Nome Completo"
                                 required= "required"
                                 value={name}
                                 onChange={(e) => {setName(e.target.value)}}
@@ -148,9 +149,9 @@ function Register(){
                             <Field
                                 icon={documentIcon}
                                 alt="CPF"
-                                placeholder="CPF"
+                                placeholder="000.000.000-00"
                                 type="number"
-                                name="cpf"
+                                name="CPF"
                                 required= "required"
                                 value={CPF}
                                 onChange={(e) => {setCPF(e.target.value)}}
@@ -160,9 +161,9 @@ function Register(){
                             <Field
                                 icon={mailIcon}
                                 alt="email"
-                                placeholder="Email"
+                                placeholder="user@email.com"
                                 type="email"
-                                name="email"
+                                name="Email"
                                 required= "required"
                                 value={email}
                                 onChange={(e) => {setEmail(e.target.value)}}
@@ -172,9 +173,9 @@ function Register(){
                             <Field
                                 icon={documentIcon}
                                 alt="CNH"
-                                placeholder="CNH"
+                                placeholder="000123456789"
                                 type="string"
-                                name="cnh"
+                                name="CNH"
                                 required= "required"
                                 value={CNH}
                                 onChange={(e) => {setCNH(e.target.value)}}
@@ -184,9 +185,9 @@ function Register(){
                             <Field
                                 icon={phoneIcon}
                                 alt="telefone"
-                                placeholder="Telefone"
+                                placeholder="(00) 9 0000-0000"
                                 type="number"
-                                name="telefone"
+                                name="Telefone"
                                 required= "required"
                                 value={telefone}
                                 onChange={(e) => {setTelefone(e.target.value)}}
@@ -196,9 +197,9 @@ function Register(){
                             <Field
                                 icon={whatasppIcon}
                                 alt="whatsapp"
-                                placeholder="Whatsapp"
+                                placeholder="(00) 9 0000-0000"
                                 type="number"
-                                name="whatsapp"
+                                name="Whatsapp"
                                 required= "required"
                                 value={whatsapp}
                                 onChange={(e) => {setWhatsapp(e.target.value)}}
@@ -210,9 +211,9 @@ function Register(){
                                 <Field
                                     icon={passwordIcon}
                                     alt="senha"
-                                    placeholder="Senha"
+                                    placeholder="****"
                                     type="password"
-                                    name="senha"
+                                    name="Senha"
                                     required= "required"
                                     value={password}
                                     onChange={(e) => {setPassword(e.target.value)}}
@@ -222,19 +223,20 @@ function Register(){
                                 <Field
                                     icon={passwordIcon}
                                     alt="confirmar senha"
-                                    placeholder="Confirmar Senha"
+                                    placeholder="******"
                                     type="password"
-                                    name="confirmar"
+                                    name="Confirmar Senha"
                                     required= "required"  
                                     value={confirmPassword}
                                     onChange={(e) => {setConfirmPassword(e.target.value)}}
                                 />
                             </div>
 
-                            <div className="btn">
-                                <button onClick={next}>Próximo</button>
-                            </div>
                         </form>
+                        
+                        <div className="btn">
+                            <button onClick={next}>Próximo</button>
+                        </div>
 
 
                     </div>
@@ -249,32 +251,32 @@ function Register(){
                                 </h2>
                                 <Field
                                 required= "required"
-                                type="number" name="cep" placeholder="CEP" icon={cepIcon} alt="cep" 
+                                type="number" name="CEP" placeholder="12345-000" icon={cepIcon} alt="cep" 
                                 value={cepOne}
                                 onChange={(e) => {setCepOne(e.target.value)}}
                                 />
 
                                 <Field
                                 required= "required"
-                                type="text" name="estado" placeholder="Estado" icon={mylocationIcon} alt="estado" 
+                                type="text" name="Estado" placeholder="Estado" icon={mylocationIcon} alt="estado" 
                                 value={estadoOne}
                                 onChange={(e) => {setEstadoOne(e.target.value)}}
                                 />
                                 <Field
                                 required= "required"
-                                type="text" name="cidade" placeholder="Cidade" icon={mylocationIcon} alt="cidade"
+                                type="text" name="Cidade" placeholder="Cidade" icon={mylocationIcon} alt="cidade"
                                 value={cidadeOne}
                                 onChange={(e) => {setCidadeOne(e.target.value)}}
                                 />
                                 <Field
                                 required= "required"
-                                type="text" name="endereco" placeholder="Endereço" icon={locationIcon} alt="endereço" 
+                                type="text" name="Endereço" placeholder="Rua/Av" icon={locationIcon} alt="endereço" 
                                 value={enderecoOne}
                                 onChange={(e) => {setEnderecoOne(e.target.value)}}
                                 />
                                 <Field
                                 required= "required"
-                                type="text" name="numero" placeholder="Número" icon={locationIcon} alt="numero" 
+                                type="text" name="Número" placeholder="000" icon={locationIcon} alt="numero" 
                                 value={numeroOne}
                                 onChange={(e) => {setNumeroOne(e.target.value)}}
                                 />
@@ -286,32 +288,32 @@ function Register(){
                                 </h2>
                                 <Field
                                 required= "required"
-                                type="number" name="cep" placeholder="CEP" icon={cepIcon} alt="cep" 
+                                type="number" name="CEP" placeholder="12345-000" icon={cepIcon} alt="cep" 
                                 value={cepTwo}
                                 onChange={(e) => {setCepTwo(e.target.value)}}
                                 />
 
                                 <Field
                                 required= "required"
-                                type="text" name="estado" placeholder="Estado" icon={mylocationIcon} alt="estado" 
+                                type="text" name="Estado" placeholder="Estado" icon={mylocationIcon} alt="estado" 
                                 value={estadoTwo}
                                 onChange={(e) => {setEstadoTwo(e.target.value)}}
                                 />
                                 <Field
                                 required= "required"
-                                type="text" name="cidade" placeholder="Cidade" icon={mylocationIcon} alt="cidade"
+                                type="text" name="Cidade" placeholder="Cidade" icon={mylocationIcon} alt="cidade"
                                 value={cidadeTwo}
                                 onChange={(e) => {setCidadeTwo(e.target.value)}} 
                                 />
                                 <Field
                                 required= "required"
-                                type="text" name="endereco" placeholder="Endereço" icon={locationIcon} alt="endereço" 
+                                type="text" name="Endereço" placeholder="Rua/Av" icon={locationIcon} alt="endereço" 
                                 value={enderecoTwo}
                                 onChange={(e) => {setEnderecoTwo(e.target.value)}}
                                 />
                                 <Field
                                 required= "required"
-                                type="text" name="numero" placeholder="Número" icon={locationIcon} alt="numero" 
+                                type="text" name="Número" placeholder="000" icon={locationIcon} alt="numero" 
                                 value={numeroTwo}
                                 onChange={(e) => {setNumeroTwo(e.target.value)}}
                                 />
